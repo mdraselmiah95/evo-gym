@@ -6,7 +6,7 @@ type Props = {
   selectedPage: string;
   setSelectedPage: (value: string) => void;
 };
-
+// Topper to the you ==>
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "");
 
