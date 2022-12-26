@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "@/scenes/navbar";
 
 function App() {
   return (
-    <h1 className="bg-gray-20 text-3xl font-bold  underline">Hello world!</h1>
+    <div>
+      <Navbar />
+    </div>
   );
 }
 
