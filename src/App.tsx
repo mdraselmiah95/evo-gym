@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/scenes/navbar";
 
 function App() {
+  const [selectedPage, setSelectedPage] = useState("home");
+
   return (
     <div>
-      <Navbar />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
     </div>
   );
 }
