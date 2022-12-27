@@ -22,7 +22,11 @@ function App() {
 
   return (
     <div>
-      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
     </div>
   );
 }
