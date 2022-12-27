@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "@/scenes/navbar";
 import { SelectedPage } from "@/shared/types";
+import Home from "@/scenes/home";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -27,10 +28,11 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <Home setSelectedPage={setSelectedPage} />
     </div>
   );
 }
 
 export default App;
 
-//=> 1:04:00 video
+//=> 1:45:00 video
