@@ -1,6 +1,6 @@
 import React from "react";
 import ActionButton from "@/shared/ActionButton";
-import { SelectedPage } from "@/shared/types";
+import { BenefitType, SelectedPage } from "@/shared/types";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -9,8 +9,9 @@ import {
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import HText from "@/shared/HText";
+import Benefit from "./Benefit";
 
-const benefits = [
+const benefits: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
@@ -61,10 +62,21 @@ const Benefits = ({ setSelectedPage }: Props) => {
           </p>
         </motion.div>
         {/* BENEFITS */}
-        <motion.div className="mt-5 items-center justify-between gap-8 md:flex"></motion.div>
+        <motion.div className="mt-5 items-center justify-between gap-8 md:flex">
+          {benefits.map((benefit: BenefitType) => (
+            <Benefit
+              key={benefit.title}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+              setSelectedPage={setSelectedPage}
+            />
+          ))}
+        </motion.div>
       </motion.div>
     </section>
   );
 };
 
 export default Benefits;
+//The main the coolest
