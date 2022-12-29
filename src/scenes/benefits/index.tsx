@@ -79,4 +79,3 @@ const Benefits = ({ setSelectedPage }: Props) => {
 };
 
 export default Benefits;
-//The main the coolest
