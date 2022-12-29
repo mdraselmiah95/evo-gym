@@ -40,6 +40,11 @@ function OurClasses({ setSelectedPage }: Props) {
             </p>
           </div>
         </motion.div>
+        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
+          <ul className="w-[2800px] whitespace-nowrap">
+            <h3>This is a cool.</h3>
+          </ul>
+        </div>
       </motion.div>
     </section>
   );
